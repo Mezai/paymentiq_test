@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sign in{% endblock %}
+
+{% block body %}
+
+   <h1>The flow is now completed</h1>
+
+   <h2>User Data</h2>
+   <p>{{ content.firstName }}</p>
+
+   <div class="row justify-content-md-center">
+      <div class="col-4 align-self-center justify-content-center">
+         {{ form(form) }}
+      </div>
+   </div>
+
+
+
+{% endblock %}

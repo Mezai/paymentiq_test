@@ -1,3 +1,44 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+verifyuser:
+    path: /api/verifyuser
+    controller: App\Controller\IntegrationApiController::verifyuser
+signapi:
+    path: /api/signin
+    controller: App\Controller\SignInController::signin
+    methods: POST
+authorize:
+    path: /api/authorize
+    controller: App\Controller\IntegrationApiController::authorize
+transfer:
+    path: /api/transfer
+    controller: App\Controller\IntegrationApiController::transfer
+    methods: POST
+signin:
+    path: /signin
+    controller: App\Controller\SignInController::initialize
+response:
+    path: /oauth2/callback
+    controller: App\Controller\SignInController::response
+cashier:
+    path: /cashier
+    controller: App\Controller\CashierController::index
+trustly:
+    path: /trustly
+    controller: App\Controller\TrustlyDepositController::process
+success:
+    path: /success
+    controller: App\Controller\SignInController::success
+    methods: GET
+cancel:
+    path: /cancel
+    controller: App\Controller\SignInController::cancel
+    methods: GET
+cancelled:
+    path: /api/cancel
+    controller: App\Controller\IntegrationApiController::cancel
+    methods: POST
+adminapi:
+    path: /admin/kyc
+    controller: App\Controller\AdminApiController::kyc
